@@ -1,0 +1,30 @@
+mov ch,bh
+    mov cl,bl
+    
+    and bh,0f0h
+    ror bh,04h
+    add bh,'0'
+    mov dl,bh
+    mov ah,02h
+    int 21h
+    
+    mov bh,ch
+    and bh,0fh
+    add bh,'0'
+    mov dl,bh
+    mov ah,02h
+    int 21h
+    
+    and bl,0f0h
+    ror bl,04h
+    add bl,'0'
+    mov dl,bl
+    mov ah,02h
+    int 21h
+    
+    mov bl,cl
+    and bl,0fh
+    add bl,'0'
+    mov dl,bl
+    mov ah,02h
+    int 21h
